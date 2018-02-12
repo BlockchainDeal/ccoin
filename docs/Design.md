@@ -1,6 +1,6 @@
 ## Notes on Design
 
-Bcoin is thoroughly event driven. It has a fullnode object, but Bcoin was
+Ccoin is thoroughly event driven. It has a fullnode object, but Ccoin was
 specifically designed so the mempool, blockchain, p2p pool, and wallet database
 could all be used separately. All the fullnode object does is tie these things
 together. It's essentially a huge proxying of events. The general communication
@@ -20,7 +20,7 @@ http client -> tx -> http server -> mempool
 ```
 
 Not only does the loose coupling make testing easier, it ensures people can
-utilize bcoin for many use cases.
+utilize ccoin for many use cases.
 
 ### Performance
 
@@ -36,7 +36,7 @@ well-written.
 
 #### Concurrency
 
-Bcoin runs in node.js, so the javascript code is limited to one thread. We
+Ccoin runs in node.js, so the javascript code is limited to one thread. We
 solve this limitation by spinning up persistent worker processes for
 transaction verification (webworkers when in the browser). This ensures the
 blockchain and mempool do not block the master process very much. It also means
@@ -50,22 +50,22 @@ data to another process.
 But of course, there is a benefit to having a multi-process architecture: the
 worker processes can die on their own without disturbing the master process.
 
-Bcoin uses [secp256k1-node][secp256k1-node] for ecdsa verification, which is a
+Ccoin uses [secp256k1-node][secp256k1-node] for ecdsa verification, which is a
 node.js binding to Pieter Wuille's blazingly fast [libsecp256k1][libsecp256k1]
 library.
 
-In the browser, bcoin will use [elliptic][elliptic], the fastest javascript
+In the browser, ccoin will use [elliptic][elliptic], the fastest javascript
 ecdsa implementation. It will obviously never beat C and hand-optimized
 assembly, but it's still usable.
 
 #### Benefits
 
 The real feature of javascript is that your code will run almost anywhere. With
-bcoin, we now have a full node that will run on almost any browser, on laptops,
+ccoin, we now have a full node that will run on almost any browser, on laptops,
 on servers, on smartphones, on most devices you can imagine, even by simply
 visiting a webpage.
 
 [v8]: https://www.youtube.com/watch?v=UJPdhx5zTaw
-[libsecp256k1]: https://github.com/bitcoin-core/secp256k1
+[libsecp256k1]: https://github.com/creativecoin-core/secp256k1
 [secp256k1-node]: https://github.com/cryptocoinjs/secp256k1-node
 [elliptic]: https://github.com/indutny/elliptic

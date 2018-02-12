@@ -14,7 +14,7 @@ function createGenesisBlock(options) {
 
   if (!flags) {
     flags = Buffer.from(
-      'The Times 03/Jan/2009 Chancellor on brink of second bailout for banks',
+      'NY Times 1 May 2017 turkey Purges 4 000 More officials and blocks wikipedia',
       'ascii');
   }
 
@@ -66,16 +66,16 @@ function createGenesisBlock(options) {
 
 const main = createGenesisBlock({
   version: 1,
-  time: 1231006505,
-  bits: 486604799,
-  nonce: 2083236893
+  time: 1493601901,
+  bits: 504365040,
+  nonce: 741491
 });
 
 const testnet = createGenesisBlock({
   version: 1,
-  time: 1296688602,
-  bits: 486604799,
-  nonce: 414098458
+  time: 1514393320,
+  bits: 504365040,
+  nonce: 201857
 });
 
 const regtest = createGenesisBlock({
@@ -99,7 +99,7 @@ const segnet4 = createGenesisBlock({
   nonce: 0
 });
 
-const btcd = createGenesisBlock({
+const cread = createGenesisBlock({
   version: 1,
   time: 1401292357,
   bits: 545259519,
@@ -132,5 +132,5 @@ util.log('');
 util.log('segnet4 hash: %s', segnet4.rhash());
 util.log('segnet4 raw: %s', segnet4.toRaw().toString('hex'));
 util.log('');
-util.log('btcd simnet hash: %s', btcd.rhash());
-util.log('btcd simnet raw: %s', btcd.toRaw().toString('hex'));
+util.log('cread simnet hash: %s', cread.rhash());
+util.log('cread simnet raw: %s', cread.toRaw().toString('hex'));

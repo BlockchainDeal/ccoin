@@ -2,18 +2,18 @@
 
 /* eslint new-cap: "off" */
 
-const bcoin = require('../..');
+const ccoin = require('../..');
 const assert = require('assert');
 
 (async () => {
-  const master = bcoin.hd.generate();
+  const master = ccoin.hd.generate();
   const key = master.derivePath('m/44/0/0/0/0');
-  const keyring = new bcoin.keyring(key.privateKey);
-  const cb = new bcoin.mtx();
+  const keyring = new ccoin.keyring(key.privateKey);
+  const cb = new ccoin.mtx();
 
   cb.addInput({
-    prevout: new bcoin.outpoint(),
-    script: new bcoin.script(),
+    prevout: new ccoin.outpoint(),
+    script: new ccoin.script(),
     sequence: 0xffffffff
   });
 
@@ -29,11 +29,11 @@ const assert = require('assert');
   // Convert the coinbase output to a Coin
   // object and add it to our available coins.
   // In reality you might get these coins from a wallet.
-  const coin = bcoin.coin.fromTX(cb, 0, -1);
+  const coin = ccoin.coin.fromTX(cb, 0, -1);
   coins.push(coin);
 
   // Create our redeeming transaction.
-  const mtx = new bcoin.mtx();
+  const mtx = new ccoin.mtx();
 
   // Send 10,000 satoshis to ourself.
   mtx.addOutput({

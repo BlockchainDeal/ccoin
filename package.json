@@ -1,20 +1,21 @@
 {
-  "name": "bcoin",
-  "version": "1.0.0-beta.15",
-  "description": "Bitcoin bike-shed",
+  "name": "ccoin",
+  "version": "0.0.1",
+  "description": "Creativecoin bike-shed",
   "license": "MIT",
-  "repository": "git://github.com/bcoin-org/bcoin.git",
-  "homepage": "https://github.com/bcoin-org/bcoin",
+  "repository": "git://github.com/creativechain/ccoin.git",
+  "homepage": "https://github.com/creativechain/ccoin",
   "bugs": {
-    "url": "https://github.com/bcoin-org/bcoin/issues"
+    "url": "https://github.com/creativechain/ccoin/issues"
   },
   "author": "Fedor Indutny <fedor@indutny.com>",
   "contributors": [
     "Christopher Jeffrey <chjjeffrey@gmail.com>"
   ],
   "keywords": [
-    "bcoin",
-    "bitcoin",
+    "ccoin",
+    "creativecoin",
+    "creativechain",
     "blockchain",
     "cryptocurrency",
     "wallet"
@@ -25,7 +26,9 @@
   "dependencies": {
     "bn.js": "4.11.8",
     "elliptic": "6.4.0",
-    "n64": "0.0.18"
+    "n64": "0.0.18",
+    "scrypt": "^6.0.3",
+    "sha3": "^1.2.0"
   },
   "optionalDependencies": {
     "bcoin-native": "0.0.23",
@@ -51,24 +54,22 @@
     "uglifyjs-webpack-plugin": "^1.0.0-beta.2",
     "webpack": "^3.5.4"
   },
-  "main": "./lib/bcoin.js",
+  "main": "./lib/ccoin.js",
   "bin": {
-    "bcoin": "./bin/bcoin",
-    "bcoin-cli": "./bin/cli",
-    "bcoin-node": "./bin/node",
-    "bcoin-spvnode": "./bin/spvnode"
+    "ccoin": "./bin/ccoin",
+    "ccoin-cli": "./bin/cli",
+    "ccoin-node": "./bin/node",
+    "ccoin-spvnode": "./bin/spvnode"
   },
   "scripts": {
-    "clean": "rm -f {browser/,}{bcoin.js,bcoin-worker.js}",
+    "clean": "rm -f {browser/,}{ccoin.js,ccoin-worker.js}",
     "docs": "jsdoc -c jsdoc.json",
     "lint": "eslint $(cat .eslintfiles) || exit 0",
     "lint-file": "eslint",
     "test": "mocha --reporter spec test/*.js",
-    "test-browser":
-      "BCOIN_NO_NATIVE=1 BCOIN_NO_SECP256K1=1 mocha --reporter spec test/*.js",
+    "test-browser": "ccoin_NO_NATIVE=1 ccoin_NO_SECP256K1=1 mocha --reporter spec test/*.js",
     "test-file": "mocha --reporter spec",
-    "test-file-browser":
-      "BCOIN_NO_NATIVE=1 BCOIN_NO_SECP256K1=1 mocha --reporter spec",
+    "test-file-browser": "ccoin_NO_NATIVE=1 ccoin_NO_SECP256K1=1 mocha --reporter spec",
     "webpack": "webpack --config webpack.browser.js",
     "webpack-browser": "webpack --config webpack.browser.js",
     "webpack-compat": "webpack --config webpack.compat.js",

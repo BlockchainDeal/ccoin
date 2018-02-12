@@ -7,8 +7,8 @@ const WSProxy = require('./wsproxy');
 const index = fs.readFileSync(`${__dirname}/index.html`);
 const indexjs = fs.readFileSync(`${__dirname}/index.js`);
 const debug = fs.readFileSync(`${__dirname}/debug.html`);
-const bcoin = fs.readFileSync(`${__dirname}/bcoin.js`);
-const worker = fs.readFileSync(`${__dirname}/bcoin-worker.js`);
+const ccoin = fs.readFileSync(`${__dirname}/ccoin.js`);
+const worker = fs.readFileSync(`${__dirname}/ccoin-worker.js`);
 
 const proxy = new WSProxy({
   pow: process.argv.indexOf('--pow') !== -1,
@@ -44,11 +44,11 @@ server.get('/debug', (req, res) => {
   res.send(200, debug, 'html');
 });
 
-server.get('/bcoin.js', (req, res) => {
-  res.send(200, bcoin, 'js');
+server.get('/ccoin.js', (req, res) => {
+  res.send(200, ccoin, 'js');
 });
 
-server.get('/bcoin-worker.js', (req, res) => {
+server.get('/ccoin-worker.js', (req, res) => {
   res.send(200, worker, 'js');
 });
 

@@ -2,16 +2,16 @@ Wallet REST API: [REST-RPC-API](REST-RPC-API.md)
 
 ## Notes on wallet system
 
-Bcoin maintains a wallet database which contains every wallet. Wallets are _not
+Ccoin maintains a wallet database which contains every wallet. Wallets are _not
 usable_ without also using a wallet database. For testing, the wallet database
 can be in-memory, but it must be there.
 
-Wallets in bcoin use bip44. They also originally supported bip45 for multisig,
+Wallets in ccoin use bip44. They also originally supported bip45 for multisig,
 but support was removed to reduce code complexity, and also because bip45
 doesn't seem to add any benefit in practice.
 
 The wallet database can contain many different wallets, with many different
-accounts, with many different addresses for each account. Bcoin should
+accounts, with many different addresses for each account. Ccoin should
 theoretically be able to scale to hundreds of thousands of
 wallets/accounts/addresses.
 

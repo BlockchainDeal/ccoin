@@ -1,7 +1,7 @@
 'use strict';
 
 const assert = require('assert');
-const bcoin = require('../');
+const ccoin = require('../');
 let file = process.argv[2];
 let batch;
 
@@ -9,7 +9,7 @@ assert(typeof file === 'string', 'Please pass in a database path.');
 
 file = file.replace(/\.ldb\/?$/, '');
 
-const db = bcoin.ldb({
+const db = ccoin.ldb({
   location: file,
   db: 'leveldb',
   compression: true,

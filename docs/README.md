@@ -1,4 +1,4 @@
-Welcome to the bcoin docs!
+Welcome to the ccoin docs!
 
 ## Getting Started
 - [Getting Started][getting-started]
@@ -8,7 +8,7 @@ Welcome to the bcoin docs!
 - [Guides][guides]
 
 ## Running
-- [Bcoin CLI][cli]
+- [Ccoin CLI][cli]
 - [Running in the Browser][browser]
 - [REST and RPC API][rest-rpc]
 
@@ -31,11 +31,11 @@ Welcome to the bcoin docs!
 [configuration]: Configuration.md
 [design]: Design.md
 [wallet-system]: Wallet-System.md
-[guides]: http://bcoin.io/guides.html
+[guides]: http://ccoin.io/guides.html
 
 [cli]: CLI.md
 [browser]: Running-in-the-browser.md
-[rest-rpc]: http://bcoin.io/api-docs/index.html#introduction
+[rest-rpc]: http://ccoin.io/api-docs/index.html#introduction
 
 [example-p2p]: Examples/connect-to-the-p2p-network.js
 [example-blockchain]: Examples/create-a-blockchain-and-mempool.js

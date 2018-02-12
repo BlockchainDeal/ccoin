@@ -1,20 +1,20 @@
-name: bcoin
+name: ccoin
 version: git
 summary: A fullnode Bitcoin implementation for miners, wallets, and exchanges
 description: |
-  Bcoin is an alternative implementation of the bitcoin protocol, written in
+  Ccoin is an alternative implementation of the creativecoin protocol, written in
   node.js.
 
 grade: devel # must be 'stable' to release into candidate/stable channels
 confinement: strict
 
 apps:
-  bcoin:
-    command: bcoin
+  ccoin:
+    command: ccoin
     plugs: [network, network-bind]
 
 parts:
-  bcoin:
+  ccoin:
     source: .
     plugin: nodejs
     build-packages: [python, gcc]

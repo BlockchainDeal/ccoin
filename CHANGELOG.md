@@ -1,10 +1,10 @@
-# Bcoin Release Notes & Changelog
+# Ccoin Release Notes & Changelog
 
 ## v1.0.0-beta.14
 
 ### Notable Changes
 
-- __pkg__ - Ignored `bcoin*` files in npmignore have been removed. This fixes
+- __pkg__ - Ignored `ccoin*` files in npmignore have been removed. This fixes
   the npm install.
 
 ## v1.0.0-beta.13
@@ -26,7 +26,7 @@
   parameters as the `getblock` call, requiring a height instead of block hash
   (12d3ee6f9582afa9a3ba8984c63dcbc27b8db57e).
 
-- __bin__ - `bcoin --version` and `bcoin --help` now exit with appropriate
+- __bin__ - `ccoin --version` and `ccoin --help` now exit with appropriate
   messages (f2f94a800e37c5dbdda6920fa6b85fbd485c212a).
 
 - __net__ - The p2p pool now exposes an `--only` option
@@ -35,7 +35,7 @@
 - __mempool__ - The mempool `indexAddress` option should now work correctly
   (fba9b46d253c19bbf8e662d9d75ab03dc9e20a78).
 
-- __rpc__ - JSON-RPC calls now properly cast booleans a la bitcoin core
+- __rpc__ - JSON-RPC calls now properly cast booleans a la creativecoin core
   (dd49ee076196d2353783e3044185165dbac4aeb9).
 
 - __rpc__ - Various RPC calls have been improved and updated
@@ -64,7 +64,7 @@
 - __build__ - The browser build has switched from browserify to webpack
   (19f236f74072d473123d20282d2119f6d9130458).
 
-- __bcoin__ - The codebase has been rewritten to use all ES6 and ES7 features
+- __ccoin__ - The codebase has been rewritten to use all ES6 and ES7 features
   supported by node.js
   (aa05bb5df79d9a3af53060a4c0c066226f6e9e4c,
   78d62c73b82e1953999d1cf80c90ed2035d4996e,
@@ -79,7 +79,7 @@
   (647b6909c6d527eb82f6d789c88a23b2f8a60126).
 
 - __http__ - Satoshi values are now required for all JSON serialization, as
-  opposed to BTC strings which were used in the past
+  opposed to CREA strings which were used in the past
   (2f51fd1c5066f194a5a52383f4dd45497b882706).
 
 - __bin__ - The `--no-wallet` flag is now exposed for nodes who want to run
@@ -89,7 +89,7 @@
   `segwit` and `segsignal` rules will be automatically added when calling
   `getblocktemplate`. To enable bip91 on an existing database `--force-flags`
   must be passed. This will force bip91 to be enforced, but will not invalidate
-  any previous blocks (`bcoin cli reset [height]` may need to be used).
+  any previous blocks (`ccoin cli reset [height]` may need to be used).
 
 - __chain__ - BIP148 support is now exposed via the `--bip148` option. This
   likewise must be enabled with `--force-flags` on existing chains. This has
@@ -99,12 +99,12 @@
 
 This release contains a few non-backward-compatible changes.
 
-Bcoin now requires node.js >=7.6.0 due to the use of ES6/7 features, and for
+Ccoin now requires node.js >=7.6.0 due to the use of ES6/7 features, and for
 the sake of more stability.
 
-Bcoin's rest API now assumes satoshi values for in all JSON serialization.
+Ccoin's rest API now assumes satoshi values for in all JSON serialization.
 __This is a breaking change__ for code that is not aware of it. All code which
-hits the rest API must be updated to use only satoshi values as opposed to BTC
+hits the rest API must be updated to use only satoshi values as opposed to CREA
 strings.
 
 In other words, this:
@@ -153,7 +153,7 @@ Becomes this:
   `wallet auth`.
 - __config__ - `payout-address` option was changed to `coinbase-address`.
 - __node__ - Plugin system is now exposed.
-  See https://github.com/bcoin-org/bcoin/pull/156.
+  See https://github.com/ccoin-org/ccoin/pull/156.
 - __config__ - The internal API for the config object has been rewritten
   and is now more reusable, particularly by node plugins.
 - __http/rpc__ - Both the HTTPBase and RPCBase objects now allow "mounting" by
@@ -211,7 +211,7 @@ Becomes this:
 
 ### Notable Changes
 
-- __http__ - Better bitcoind compatability for JSON-RPC.
+- __http__ - Better creativecoind compatability for JSON-RPC.
 
 ## v1.0.0-beta.5
 
@@ -226,7 +226,7 @@ Becomes this:
 
 - __miner__ - Optimized TX sorting.
 - __rpc__ - Improved getblocktemplate to provide more
-  accurate results to bitcoind.
+  accurate results to creativecoind.
 
 ## v1.0.0-beta.3
 

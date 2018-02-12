@@ -1,10 +1,10 @@
 'use strict';
 
-const bcoin = require('../..');
-const KeyRing = bcoin.keyring;
-const WorkerPool = bcoin.workerpool;
-const Chain = bcoin.chain;
-const Miner = bcoin.miner;
+const ccoin = require('../..');
+const KeyRing = ccoin.keyring;
+const WorkerPool = ccoin.workerpool;
+const Chain = ccoin.chain;
+const Miner = ccoin.miner;
 
 const key = KeyRing.generate('regtest');
 

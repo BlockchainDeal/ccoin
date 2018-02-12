@@ -1,6 +1,6 @@
 'use strict';
 
-const bcoin = require('../');
+const ccoin = require('../');
 const assert = require('assert');
 const BufferWriter = require('../lib/utils/writer');
 let file = process.argv[2];
@@ -9,7 +9,7 @@ assert(typeof file === 'string', 'Please pass in a database path.');
 
 file = file.replace(/\.ldb\/?$/, '');
 
-const db = bcoin.ldb({
+const db = ccoin.ldb({
   location: file,
   db: 'leveldb',
   compression: true,

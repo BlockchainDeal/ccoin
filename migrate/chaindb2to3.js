@@ -3,7 +3,7 @@
 if (process.argv.indexOf('-h') !== -1
     || process.argv.indexOf('--help') !== -1
     || process.argv.length < 3) {
-  console.error('Bcoin database migration (chaindb v2->v3).');
+  console.error('Ccoin database migration (chaindb v2->v3).');
   console.error('');
   console.error('Usage:');
   console.error('  $ node migrate/chaindb2to3.js [database-path] [--prune]');
@@ -110,7 +110,7 @@ async function updateVersion() {
     throw Error(`DB is version ${version}.`);
 
   // Set to uint32_max temporarily.
-  // This is to prevent bcoin from
+  // This is to prevent ccoin from
   // trying to access this chain.
   const data = Buffer.allocUnsafe(4);
   data.writeUInt32LE(-1 >>> 0, 0, true);

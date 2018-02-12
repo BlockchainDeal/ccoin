@@ -1,12 +1,12 @@
 'use strict';
-const bcoin = require('../..');
-const Chain = bcoin.chain;
-const Mempool = bcoin.mempool;
-const Miner = bcoin.miner;
+const ccoin = require('../..');
+const Chain = ccoin.chain;
+const Mempool = ccoin.mempool;
+const Miner = ccoin.miner;
 
 // Default network (so we can avoid passing
 // the `network` option into every object below.)
-bcoin.set('regtest');
+ccoin.set('regtest');
 
 // Start up a blockchain, mempool, and miner using in-memory
 // databases (stored in a red-black tree instead of on-disk).

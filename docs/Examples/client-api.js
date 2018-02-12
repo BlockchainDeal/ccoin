@@ -1,13 +1,13 @@
 'use strict';
 
-const bcoin = require('../..');
-const encoding = bcoin.encoding;
-const co = bcoin.co;
-const Outpoint = bcoin.outpoint;
-const MTX = bcoin.mtx;
-const HTTP = bcoin.http;
-const FullNode = bcoin.fullnode;
-const plugin = bcoin.wallet.plugin;
+const ccoin = require('../..');
+const encoding = ccoin.encoding;
+const co = ccoin.co;
+const Outpoint = ccoin.outpoint;
+const MTX = ccoin.mtx;
+const HTTP = ccoin.http;
+const FullNode = ccoin.fullnode;
+const plugin = ccoin.wallet.plugin;
 
 const node = new FullNode({
   network: 'regtest',

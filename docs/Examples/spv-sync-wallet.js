@@ -1,11 +1,11 @@
 'use strict';
 
-const bcoin = require('../..');
-const Chain = bcoin.chain;
-const Pool = bcoin.pool;
-const WalletDB = bcoin.walletdb;
+const ccoin = require('../..');
+const Chain = ccoin.chain;
+const Pool = ccoin.pool;
+const WalletDB = ccoin.walletdb;
 
-bcoin.set('testnet');
+ccoin.set('testnet');
 
 // SPV chains only store the chain headers.
 const chain = Chain({
@@ -48,7 +48,7 @@ const walletdb = new WalletDB({ db: 'memory' });
 
   wallet.on('balance', (balance) => {
     console.log('Balance updated.');
-    console.log(bcoin.amount.btc(balance.unconfirmed));
+    console.log(ccoin.amount.crea(balance.unconfirmed));
   });
 })().catch((err) => {
   console.error(err.stack);

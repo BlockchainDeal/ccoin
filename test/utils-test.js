@@ -7,7 +7,7 @@ const assert = require('./util/assert');
 const {U64, I64} = require('../lib/utils/int64');
 const base58 = require('../lib/utils/base58');
 const encoding = require('../lib/utils/encoding');
-const Amount = require('../lib/btc/amount');
+const Amount = require('../lib/crea/amount');
 const Validator = require('../lib/utils/validator');
 const util = require('../lib/utils/util');
 
@@ -81,13 +81,13 @@ describe('Utils', function() {
     }
   });
 
-  it('should convert satoshi to btc', () => {
-    assert.strictEqual(Amount.btc(5460), '0.0000546');
-    assert.strictEqual(Amount.btc(54678 * 1000000), '546.78');
-    assert.strictEqual(Amount.btc(5460 * 10000000), '546.0');
+  it('should convert satoshi to crea', () => {
+    assert.strictEqual(Amount.crea(5460), '0.0000546');
+    assert.strictEqual(Amount.crea(54678 * 1000000), '546.78');
+    assert.strictEqual(Amount.crea(5460 * 10000000), '546.0');
   });
 
-  it('should convert btc to satoshi', () => {
+  it('should convert crea to satoshi', () => {
     assert.strictEqual(Amount.value('0.0000546'), 5460);
     assert.strictEqual(Amount.value('546.78'), 54678 * 1000000);
     assert.strictEqual(Amount.value('546'), 5460 * 10000000);

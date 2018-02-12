@@ -1,7 +1,7 @@
 'use strict';
 
 const assert = require('assert');
-const bcoin = require('../');
+const ccoin = require('../');
 const encoding = require('../lib/utils/encoding');
 const BufferWriter = require('../lib/utils/writer');
 const BufferReader = require('../lib/utils/reader');
@@ -12,7 +12,7 @@ assert(typeof file === 'string', 'Please pass in a database path.');
 
 file = file.replace(/\.ldb\/?$/, '');
 
-const db = bcoin.ldb({
+const db = ccoin.ldb({
   location: file,
   db: 'leveldb',
   compression: true,
@@ -266,6 +266,6 @@ async function unstate() {
 })().then(() => {
   console.log('Migration complete.');
   console.log('Rescan is required...');
-  console.log('Start bcoin with `--start-height=[wallet-creation-height]`.');
+  console.log('Start ccoin with `--start-height=[wallet-creation-height]`.');
   process.exit(0);
 });
